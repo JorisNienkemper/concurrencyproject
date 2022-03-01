@@ -8,9 +8,7 @@ import static com.infosupport.concurrencyutils.StopWatch.meseaureDuration;
 public class SequentialTests {
 
     @Test
-    @DisplayName("""
-    An inefficient way to use our resources
-    """)
+    @DisplayName("    An inefficient way to use our resources ")
     void doSomeWork(){
         long duration = meseaureDuration(()->{
             Sequential sequential = new Sequential();

@@ -11,11 +11,15 @@
         <module>demo001-sequential</module>
         <module>demo999-concurrency-utils</module>
         <module>demo100-threads</module>
+        <module>demo120-runnable</module>
+        <module>demo200-executorservice</module>
+        <module>demo250-completionservice</module>
+        <module>demo130-cancelflag</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -40,9 +44,38 @@
             <dependency>
                 <groupId>org.jooq</groupId>
                 <artifactId>jool</artifactId>
-                <version>0.9.14</version>
+                <!-- Do not take 0.9.14 it is more up to date, but it is not compiled against 1.8-->
+                <version>0.9.12</version>
+            </dependency>
+            <dependency>
+                <groupId>com.infosupport</groupId>
+                <artifactId>demo001-sequential</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>

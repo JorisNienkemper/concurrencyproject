@@ -8,9 +8,7 @@ import org.junit.jupiter.api.Test;
 public class ThreadsTests {
 
     @Test
-    @DisplayName("""
-    Hopefully a more efficient use of the processors
-    """)
+    @DisplayName("  Hopefully a more efficient use of the processors")
     void howLongDoesTake(){
         long duration = StopWatch.meseaureDuration(Unchecked.runnable(() ->{
             ElephantThread elephantThread = new ElephantThread();
