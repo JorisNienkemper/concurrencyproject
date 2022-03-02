@@ -3,13 +3,13 @@ package com.infosupport.cancable;
 import com.infosupport.concurrencyutils.Sleeper;
 
 public class CancelFlagRunnable implements Runnable {
-    private static  volatile   boolean cancelled;
+    private static volatile boolean cancelled;
 
     @Override
     public void run() {
         long counter = 0;
-        while(!cancelled) {
-           // System.out.println("Very important work");
+        while (!cancelled) {
+            //System.out.println("Very important work");
             counter++;
         }
         System.out.println("cancelled after " + counter + " counts");

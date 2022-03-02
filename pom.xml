@@ -15,6 +15,11 @@
         <module>demo200-executorservice</module>
         <module>demo250-completionservice</module>
         <module>demo130-cancelflag</module>
+        <module>demo300-completablefuture</module>
+        <module>demo400-forkjoin</module>
+        <module>demo500-raceconditions</module>
+        <module>demo600-atomic</module>
+        <module>demo110-interruptedexception</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -54,6 +59,21 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jool</artifactId>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
